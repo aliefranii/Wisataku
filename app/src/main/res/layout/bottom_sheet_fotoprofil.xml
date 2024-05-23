@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.bottomsheet.BottomSheetDragHandleView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginStart="39dp"
+        android:layout_marginEnd="39dp">
+
+        <!-- ImageView untuk menampilkan foto profil -->
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="129dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="112dp"
+            android:text="Ubah foto profil"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageViewProfile"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/profil" />
+
+        <!-- Tombol untuk memilih gambar baru untuk profil -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnUbahFoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#86A789"
+            android:drawablePadding="16dp"
+            android:elevation="8dp"
+            android:textColor="@color/white"
+            android:text="Pilih Foto Baru"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textSize="12dp" />
+
+        <!-- EditText, Button Simpan, dan Button Batal tetap sama seperti sebelumnya -->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSimpan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#86A789"
+            android:drawablePadding="16dp"
+            android:elevation="8dp"
+            android:textColor="@color/white"
+            android:text="Simpan"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textSize="12dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnBatal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:backgroundTint="#DEDEDE"
+            android:layout_marginBottom="16dp"
+            android:drawablePadding="16dp"
+            android:elevation="8dp"
+            android:textColor="#A7A7A7"
+            android:text="Batalkan"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textSize="12dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

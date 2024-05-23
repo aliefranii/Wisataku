@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="121dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/b1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="22dp"
+        android:orientation="vertical"
+        android:padding="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp">
+
+
+        <EditText
+            android:id="@+id/emailRegEt"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/emailbackground"
+            android:elevation="2dp"
+            android:ems="10"
+            android:hint="Masukkan Email"
+            android:inputType="text"
+            android:textColorHint="#A8A8B2"
+            android:textColor="@color/black"
+            android:paddingStart="12dp"
+            android:textSize="12dp" />
+
+        <EditText
+            android:id="@+id/usernameRegEt"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/emailbackground"
+            android:elevation="2dp"
+            android:ems="10"
+            android:hint="Masukkan Username"
+            android:inputType="text"
+            android:paddingStart="12dp"
+            android:textColorHint="#A8A8B2"
+            android:textColor="@color/black"
+            android:textSize="12dp" />
+
+        <EditText
+            android:id="@+id/NoTeleponRegEt"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/emailbackground"
+            android:elevation="2dp"
+            android:ems="10"
+            android:hint="Masukkan Nomor Telepon"
+            android:inputType="number"
+            android:paddingStart="12dp"
+            android:textColorHint="#A8A8B2"
+            android:textColor="@color/black"
+            android:textSize="12dp" />
+
+
+        <EditText
+            android:id="@+id/passwordEtReg"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/emailbackground"
+            android:elevation="2dp"
+            android:ems="10"
+            android:hint="Masukkan Password"
+            android:inputType="textPassword"
+            android:paddingStart="12dp"
+            android:textColorHint="#A8A8B2"
+            android:textColor="@color/black"
+            android:textSize="12dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*Password yang dimasukkan minimal beisi 8 karakter"
+            android:textSize="10dp"
+            android:layout_marginTop="8dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnRegister"
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/bglist"
+            android:text="Daftarkan"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/sk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Baca"
+                android:textColor="@color/black"
+                android:textAlignment="textEnd"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/sk2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingStart="2dp"
+                android:textColor="@color/black"
+                android:text=" Syarat dan Ketentuan"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/punyaakun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:text="Sudah punya akun?"
+                android:textAlignment="textEnd"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/logintv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingStart="2dp"
+                android:textColor="@color/black"
+                android:text=" Masuk"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

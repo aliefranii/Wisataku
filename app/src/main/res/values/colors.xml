@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="semitransparant">#7E000000</color>
+    <color name="merahkealbu">#E28173</color>
+    <color name="ijoburam">#4CAF50</color>
+    <color name="abuabu">#E1DFDF</color>
+</resources>

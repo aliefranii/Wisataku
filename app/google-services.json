@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "554138725731",
+    "firebase_url": "https://wisataku-da52e-default-rtdb.firebaseio.com",
+    "project_id": "wisataku-da52e",
+    "storage_bucket": "wisataku-da52e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:554138725731:android:edbc4bb0b9f993c59af756",
+        "android_client_info": {
+          "package_name": "com.example.beranda"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB12eAX4CZoHIKdikJAOTw1YVogRrzNRlE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ListWisataM">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:elevation="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:navigationIcon="@drawable/panahkiri">
+
+                <ImageView
+                    android:id="@+id/backinput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/panahkiri"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"/>
+
+                <TextView
+                    android:id="@+id/titleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mitra"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:layout_centerInParent="true"
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:id="@+id/tvSimpanInputWisata"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/titleTextView"
+                    android:layout_marginStart="80dp"
+                    android:text="Simpan"
+                    android:textColor="#4F6F52"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <TextView
+            android:id="@+id/tvNamaWisataInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="Nama Wisata"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etNamaWisataInput"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/inputwisatabackground"
+            android:elevation="2dp"
+            android:ems="10"
+            android:textColorHint="#A8A8B2"
+            android:hint="Masukkan Nama Wisata"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:paddingStart="12dp"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/tvNamaKabupatenInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Kabupaten/Kota"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etNamaKabupatenInput"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/inputwisatabackground"
+            android:paddingEnd="12dp"
+            android:elevation="2dp"
+            android:ems="10"
+            android:textColorHint="#A8A8B2"
+            android:hint="Masukkan Nama Kabupaten"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:paddingStart="12dp"
+            android:textSize="12sp" />
+
+
+        <TextView
+            android:id="@+id/tvalamatInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Alamat/Lokasi"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etalamatInput"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/inputwisatabackground"
+            android:elevation="2dp"
+            android:ems="10"
+            android:textColorHint="#A8A8B2"
+            android:hint="Masukkan Alamat Wisata"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:paddingStart="12dp"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/tvaNoInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="No. WhatsApp"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etNoInput"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/inputwisatabackground"
+            android:elevation="2dp"
+            android:ems="10"
+            android:textColorHint="#A8A8B2"
+            android:hint="Masukkan Nomor Telepon"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:paddingStart="12dp"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/tvDeskripsi_Input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Deskripsi Wisata"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etDeskripsiInput"
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/inputwisatabackground"
+            android:elevation="2dp"
+            android:ems="10"
+            android:hint="Masukkan Deskripsi Wisata"
+            android:inputType="textMultiLine"
+            android:paddingStart="12dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="5dp"
+            android:gravity="start|top"
+            android:textColor="@color/black"
+            android:textColorHint="#A8A8B2"
+            android:textSize="12sp"
+            android:scrollHorizontally="false"
+            android:overScrollMode="always" />
+
+        <TextView
+            android:id="@+id/tvDeskripsiInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Foto wisata"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Inputgambar"
+            android:layout_width="163dp"
+            android:layout_height="113dp"
+            android:layout_marginTop="2dp"
+            android:elevation="2dp"
+            android:paddingStart="12dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="12dp"
+            app:cardCornerRadius="8dp"
+            app:cardUseCompatPadding="true">
+
+            <!-- Background -->
+            <ImageView
+                android:id="@+id/fotoTambahkan"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/inputwisatabackground"
+                android:scaleType="centerCrop" />
+
+            <!-- Icon -->
+            <ImageView
+                android:id="@+id/ikonfoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/inputimage"
+                android:contentDescription="icon" />
+
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="12dp"
+            android:text="*Jika data telah lengkap, klik simpan dan tunggu beberapa saat hingga data tersimpan"/>
+        <ImageView
+            android:id="@+id/ivGambar"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="centerCrop" />
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
