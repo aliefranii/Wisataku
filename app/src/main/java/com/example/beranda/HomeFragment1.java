@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -24,6 +25,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 
 /**
@@ -36,6 +38,7 @@ public class HomeFragment1 extends Fragment {
     private RecyclerView recyclerView;
 
     private HomeAdapter homeAdapter;
+    private ImageView imageView;
 
     private String kabupatenId;
 
@@ -105,6 +108,8 @@ public class HomeFragment1 extends Fragment {
         homeAdapter = new HomeAdapter(options, getContext());
         recyclerView.setAdapter(homeAdapter);
 
+
+        imageView = view.findViewById(R.id.imageView4);
         TextView usernameTextView = view.findViewById(R.id.nameUsername);
 
         // Set username based on user authentication status
@@ -146,6 +151,16 @@ public class HomeFragment1 extends Fragment {
                         } else {
                             usernameTextView.setText("hallooow, Guest");
                         }
+
+                        String imageUrl = dataSnapshot.child("fotoprofil").getValue(String.class);
+                        if (imageUrl != null && !imageUrl.isEmpty()) {
+                            // Load image using Picasso
+                            Picasso.get().load(imageUrl).into(imageView);
+                        } else {
+                            // Set a default image
+                            imageView.setImageResource(R.drawable.akun);
+                        }
+
                     }
                 }
 

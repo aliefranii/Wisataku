@@ -93,7 +93,6 @@ public class Profil extends Fragment {
         // Load user data from Firebase
         String currentUserId = Objects.requireNonNull(mAuth.getCurrentUser()).getUid();
         DatabaseReference currentUserRef = mDatabase.child("users").child(currentUserId);
-        DatabaseReference profilImage = mDatabase.child("users").child(currentUserId);
 
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -105,23 +104,6 @@ public class Profil extends Fragment {
         });
 
 
-//        profilImage.addListenerForSingleValueEvent(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                String fotoprofil = snapshot.child("fotoprofil").getValue(String.class);
-//                if (fotoprofil != null){
-//                    Picasso.get().load(fotoprofil).into(imageView);
-//                } else {
-//                    imageView.setImageResource(R.drawable.akun);
-//                }
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//
-//            }
-//        });
-
         currentUserRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -130,6 +112,15 @@ public class Profil extends Fragment {
                     usernameTextView.setText(username);
                 } else {
                     usernameTextView.setText("Username Tidak Ditemukan");
+                }
+
+                String imageUrl = dataSnapshot.child("fotoprofil").getValue(String.class);
+                if (imageUrl != null && !imageUrl.isEmpty()) {
+                    // Load image using Picasso
+                    Picasso.get().load(imageUrl).into(imageView);
+                } else {
+                    // Set a default image
+                    imageView.setImageResource(R.drawable.akun);
                 }
             }
 

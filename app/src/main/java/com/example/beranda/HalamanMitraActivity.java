@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -14,6 +15,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 public class HalamanMitraActivity extends AppCompatActivity {
 
@@ -21,6 +23,7 @@ public class HalamanMitraActivity extends AppCompatActivity {
     private DatabaseReference mDatabase;
     private TextView usernameMitraTextView;
     private Button tambahWisataButton;
+    private ImageView imageView;
     private Button wisatakuButton;
     private Button backToHomeButton;
 
@@ -40,6 +43,7 @@ public class HalamanMitraActivity extends AppCompatActivity {
 
         // Inisialisasi Button Tambah Wisata
         tambahWisataButton = findViewById(R.id.tambah_wisata);
+        imageView = findViewById(R.id.imageView12);
 
         // Menambahkan event handler untuk tombol "Tambah Wisata"
         tambahWisataButton.setOnClickListener(new View.OnClickListener() {
@@ -94,6 +98,15 @@ public class HalamanMitraActivity extends AppCompatActivity {
                 if (snapshot.exists()) {
                     String username = snapshot.child("username").getValue(String.class);
                     usernameMitraTextView.setText(username);
+                }
+
+                String imageUrl = snapshot.child("fotoprofil").getValue(String.class);
+                if (imageUrl != null && !imageUrl.isEmpty()) {
+                    // Load image using Picasso
+                    Picasso.get().load(imageUrl).into(imageView);
+                } else {
+                    // Set a default image
+                    imageView.setImageResource(R.drawable.akun);
                 }
             }
 
